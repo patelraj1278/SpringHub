@@ -1,0 +1,14 @@
+feign:
+  client:
+    config:
+      products:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: FULL
+
+spring:
+  data:
+    cassandra:
+      keyspace-name: rjcassandra
+      contact-points: 127.0.0.1
+      port: 9042
