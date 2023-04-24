@@ -7,8 +7,9 @@ feign:
         loggerLevel: FULL
 
 spring:
-  data:
-    cassandra:
-      keyspace-name: rjcassandra
-      contact-points: 127.0.0.1
-      port: 9042
+  cassandra:
+    keyspace-name: rjcassandra
+    contact-points: 127.0.0.1
+    port: 9042
+    schema-action: CREATE_IF_NOT_EXISTS
+    create-keyspace: true

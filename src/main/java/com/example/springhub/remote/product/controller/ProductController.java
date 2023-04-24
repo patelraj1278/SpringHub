@@ -1,3 +1,4 @@
+/*
 package com.example.springhub.remote.product.controller;
 
 import com.example.springhub.remote.product.client.GetProducts;
@@ -30,3 +31,4 @@ public class ProductController {
         return new ResponseEntity<>(jsonString, HttpStatus.OK);
     }
 }
+*/

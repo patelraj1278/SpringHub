@@ -10,5 +10,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Products {
+    private int id;
     private String title;
+    private String description;
+    private long price;
+    private String category;
 }

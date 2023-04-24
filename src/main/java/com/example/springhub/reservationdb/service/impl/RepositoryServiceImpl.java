@@ -1,24 +1,26 @@
-package com.example.springhub.reservationdb.repository.controller;
+/*
+package com.example.springhub.reservationdb.service.impl;
 
+import com.example.springhub.reservationdb.entity.Reservation;
 import com.example.springhub.reservationdb.repository.ReservationRepository;
-import com.example.springhub.reservationdb.repository.entity.Reservation;
+import com.example.springhub.reservationdb.service.RepositoryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 import java.util.UUID;
 
-@RestController
+@Service
 @RequiredArgsConstructor
-public class ReservationController {
+public class RepositoryServiceImpl implements RepositoryService {
+
     private final ReservationRepository reservationRepository;
 
-    @GetMapping("/reservation/{id}")
-    private ResponseEntity<Reservation> reservationFlux(@PathVariable("id") UUID uuid){
-        Optional<Reservation> reservationData = this.reservationRepository.findById(uuid);
+    public ResponseEntity<Reservation> getReservationById(UUID id){
+        Optional<Reservation> reservationData = this.reservationRepository.findById(id);
+
         if(reservationData.isPresent()){
             return new ResponseEntity<>(reservationData.get(), HttpStatus.OK);
         }else{
@@ -26,10 +28,10 @@ public class ReservationController {
         }
     }
 
-    @PostMapping(value = "/addReservation",consumes = MediaType.APPLICATION_JSON_VALUE,produces = MediaType.APPLICATION_JSON_VALUE)
-    private ResponseEntity<Reservation> postReservation(@RequestBody Reservation reservation){
+    public ResponseEntity<Reservation> saveReservationData(Reservation reservation){
         Reservation _reservation = this.reservationRepository.save(new Reservation(UUID.randomUUID(),reservation.getName()));
         return new ResponseEntity<>(_reservation,HttpStatus.CREATED);
     }
 
 }
+*/
