@@ -8,8 +8,7 @@ feign:
 
 spring:
   cassandra:
-    keyspace-name: rjcassandra
+    keyspace-name: bezkoder
     contact-points: 127.0.0.1
     port: 9042
-    schema-action: CREATE_IF_NOT_EXISTS
-    create-keyspace: true
+    localDatacenter: LOCAL_DC

@@ -1,3 +1,4 @@
+/*
 package com.example.springhub.error;
 
 import org.springframework.http.HttpStatus;
@@ -23,3 +24,4 @@ public class ControllerExceptionHandler {
     }
 
 }
+*/

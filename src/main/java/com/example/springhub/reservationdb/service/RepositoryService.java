@@ -1,4 +1,3 @@
-/*
 package com.example.springhub.reservationdb.service;
 
 import com.example.springhub.reservationdb.entity.Reservation;
@@ -20,4 +19,3 @@ public interface RepositoryService {
     ResponseEntity<Reservation> saveReservationData(Reservation reservation);
 
 }
-*/

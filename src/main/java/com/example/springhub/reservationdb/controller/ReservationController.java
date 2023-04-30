@@ -1,8 +1,7 @@
-/*
 package com.example.springhub.reservationdb.controller;
 
 import com.example.springhub.reservationdb.entity.Reservation;
-import com.example.springhub.reservationdb.service.impl.RepositoryServiceImpl;
+import com.example.springhub.reservationdb.service.RepositoryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -10,12 +9,12 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
 
-@RestController
+@RestController("/reservation")
 @RequiredArgsConstructor
 public class ReservationController {
-    private final RepositoryServiceImpl repositoryService;
+    private final RepositoryService repositoryService;
 
-    @GetMapping("/reservation/{id}")
+    @GetMapping("/getReservation/{id}")
     private ResponseEntity<Reservation> getReservation(@PathVariable("id") UUID uuid){
         return this.repositoryService.getReservationById(uuid);
     }
@@ -26,4 +25,3 @@ public class ReservationController {
     }
 
 }
-*/

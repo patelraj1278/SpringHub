@@ -1,4 +1,3 @@
-/*
 package com.example.springhub.reservationdb.entity;
 
 import lombok.AllArgsConstructor;
@@ -18,7 +17,5 @@ public class Reservation {
 
     @PrimaryKey("id")
     private UUID id;
-    @Column("name")
     private String name;
 }
-*/
