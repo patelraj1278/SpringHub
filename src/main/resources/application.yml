@@ -1,14 +1,18 @@
-feign:
-  client:
-    config:
-      products:
-        connectTimeout: 5000
-        readTimeout: 5000
-        loggerLevel: FULL
+#feign:
+#  client:
+#    config:
+#      products:
+#        connectTimeout: 5000
+#        readTimeout: 5000
+#        loggerLevel: FULL
 
 spring:
   cassandra:
-    keyspace-name: bezkoder
+    keyspace-name: rjcassandra
     contact-points: 127.0.0.1
     port: 9042
-    localDatacenter: LOCAL_DC
+    localDatacenter: datacenter1
+
+server:
+  error:
+    include-message: always

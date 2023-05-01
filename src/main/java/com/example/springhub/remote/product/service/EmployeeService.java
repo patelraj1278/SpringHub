@@ -1,3 +1,4 @@
+/*
 package com.example.springhub.remote.product.service;
 
 import com.example.springhub.remote.product.model.Employee;
@@ -39,3 +40,4 @@ public class EmployeeService implements IEmployeeService {
         return parentObj.filter(x->x.getId() == id);
     }
 }
+*/

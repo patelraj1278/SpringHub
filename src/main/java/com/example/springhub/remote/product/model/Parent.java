@@ -1,3 +1,4 @@
+/*
 package com.example.springhub.remote.product.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -15,3 +16,4 @@ public class Parent {
     private String total;
     private List<Products> products;
 }
+*/

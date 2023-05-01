@@ -1,3 +1,4 @@
+/*
 package com.example.springhub.reservationdb.controller;
 
 import com.example.springhub.reservationdb.entity.Reservation;
@@ -25,3 +26,4 @@ public class ReservationController {
     }
 
 }
+*/

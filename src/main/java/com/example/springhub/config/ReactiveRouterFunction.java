@@ -1,8 +1,6 @@
 /*
 package com.example.springhub.config;
 
-import com.example.springhub.model.reactivemodels.Reservation;
-import com.example.springhub.repository.ReservationRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.reactive.function.server.RouterFunction;

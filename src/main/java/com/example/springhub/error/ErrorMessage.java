@@ -1,3 +1,4 @@
+/*
 package com.example.springhub.error;
 
 
@@ -17,3 +18,4 @@ public class ErrorMessage {
     private String message;
     private String description;
 }
+*/

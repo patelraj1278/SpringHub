@@ -1,3 +1,4 @@
+/*
 package com.example.springhub.remote.product.model;
 
 import lombok.AllArgsConstructor;
@@ -17,4 +18,4 @@ public class Employee implements Serializable {
     String name;
     String status;
 
-}
+}*/

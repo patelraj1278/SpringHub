@@ -1,23 +1,21 @@
-/*
-package com.example.springhub.reservationdb.entity;
+package com.example.springhub.reactive.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.cassandra.core.mapping.Column;
 import org.springframework.data.cassandra.core.mapping.PrimaryKey;
 import org.springframework.data.cassandra.core.mapping.Table;
 
 import java.util.UUID;
 
-@Table("reservation")
+@Table
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Reservation {
-
-    @PrimaryKey("id")
+public class Tutorial {
+    @PrimaryKey
     private UUID id;
-    private String name;
+    private String title;
+    private String description;
+    private boolean published;
 }
-*/
