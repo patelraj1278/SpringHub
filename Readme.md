@@ -1,19 +1,22 @@
 //spring security
-//modelmapper
-//play with Json, list, map
 //swagger
 //spring kafka
-//spring cassandra
 //spring cache
+//spring logging //lombok logging
+//TDD BDD
+//resiliency4j
+//spring batch
+
+//modelmapper
+//play with Json, list, map
+//spring cassandra
 //spring feign client
 //spring exception handling
 //spring actuator health
-//spring batch
-//spring logging
-//lombok logging
-//TDD BDD
 //custom deep health check
-//resiliency4j
+
+
+//aws|pcf
 //spring config server
 //blue green
 //autoscaling
