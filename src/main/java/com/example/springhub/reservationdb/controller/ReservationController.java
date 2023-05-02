@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.UUID;
 
-@RestController("/reservation")
+@RestController("/route/reservation")
 @RequiredArgsConstructor
 public class ReservationController {
     private final RepositoryService repositoryService;
