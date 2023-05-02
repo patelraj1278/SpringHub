@@ -1,4 +1,4 @@
-package com.example.springhub.config;
+package com.example.springhub.remote.product.webflux.config;
 
 import io.netty.channel.ChannelOption;
 import io.netty.handler.timeout.ReadTimeoutHandler;
