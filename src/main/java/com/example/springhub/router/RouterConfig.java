@@ -1,6 +1,7 @@
-package com.example.springhub.reactive.router;
+package com.example.springhub.router;
 
 import com.example.springhub.reactive.handler.TutorialHandler;
+import com.example.springhub.remote.product.webflux.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,6 +15,9 @@ public class RouterConfig {
     @Autowired
     TutorialHandler tutorialHandler;
 
+    @Autowired
+    EmployeeService employeeService;
+
     @Bean
     public RouterFunction<ServerResponse> routerFunction(){
         return RouterFunctions.route()
@@ -21,6 +25,7 @@ public class RouterConfig {
                 .GET("/route/tutorials/published",tutorialHandler::findByPublished)
                 .GET("/route/tutorials/{id}",tutorialHandler::getTutorialListById)
                 .POST("/route/tutorials/saveTutorials",tutorialHandler::saveTutorials)
+                .GET("/route/getProducts",employeeService::getProducts)
                 .build();
     }
 }
