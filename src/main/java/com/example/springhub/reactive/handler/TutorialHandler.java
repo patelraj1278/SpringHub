@@ -8,7 +8,6 @@ import com.example.springhub.reactive.util.ModelMapperUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
-import org.springframework.web.ErrorResponse;
 import org.springframework.web.reactive.function.server.ServerRequest;
 import org.springframework.web.reactive.function.server.ServerResponse;
 import reactor.core.publisher.Flux;
@@ -26,22 +25,25 @@ public class TutorialHandler {
         Flux<Tutorial> tutorialFlux = tutorialReactiveRepository.findAll();
         return ServerResponse.ok()
                 .contentType(MediaType.TEXT_EVENT_STREAM)
-                .body(tutorialFlux,Tutorial.class);
+                .body(tutorialFlux,Tutorial.class)
+                .switchIfEmpty(ServerResponse.notFound().build());
     }
 
     public Mono<ServerResponse> getTutorialListById(ServerRequest serverRequest){
-        Mono<Tutorial> tutorialFlux = tutorialReactiveRepository.findById(UUID.fromString(serverRequest.pathVariable("id")));
+        Mono<Tutorial> tutorialMono = tutorialReactiveRepository.findById(UUID.fromString(serverRequest.pathVariable("id")));
         return ServerResponse
                 .ok()
                 .contentType(MediaType.TEXT_EVENT_STREAM)
-                .body(tutorialFlux,Tutorial.class);
+                .body(tutorialMono,Tutorial.class)
+                .switchIfEmpty(ServerResponse.notFound().build());
     }
 
     public Mono<ServerResponse> findByPublished(ServerRequest serverRequest){
         Flux<Tutorial> tutorialFlux = tutorialReactiveRepository.findByPublished(true);
         return ServerResponse.ok()
                 .contentType(MediaType.TEXT_EVENT_STREAM)
-                .body(tutorialFlux,Tutorial.class);
+                .body(tutorialFlux,Tutorial.class)
+                .switchIfEmpty(ServerResponse.notFound().build());
     }
 
     public Mono<ServerResponse> saveTutorials(ServerRequest serverRequest){
@@ -54,6 +56,22 @@ public class TutorialHandler {
 
         return ServerResponse.ok()
                 .contentType(MediaType.TEXT_EVENT_STREAM)
-                .body(tutorialMono, Tutorial.class);
+                .body(tutorialMono, TutorialDTO.class);
+    }
+
+
+    public Mono<ServerResponse> updateUserById(ServerRequest serverRequest) {
+
+        Mono<TutorialDTO> tutorialMono = serverRequest
+                .bodyToMono(TutorialDTO.class)
+                .map(ModelMapperUtil::tutorialDtoToTutorial)
+                .doOnNext(x->x.setId(UUID.fromString(serverRequest.pathVariable("id"))))
+                .flatMap(tutorialReactiveRepository::save)
+                .map(ModelMapperUtil::tutorialToTutorialDto);
+
+        return ServerResponse.ok()
+                .contentType(MediaType.TEXT_EVENT_STREAM)
+                .body(tutorialMono, Tutorial.class)
+                .switchIfEmpty(ServerResponse.notFound().build());
     }
 }
