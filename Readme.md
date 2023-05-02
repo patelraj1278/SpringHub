@@ -1,12 +1,12 @@
 //spring security
 //swagger
 //spring kafka
-//spring cache
-//spring logging //lombok logging
-//TDD BDD
-//resiliency4j
 //spring batch
 
+//spring cache
+//resiliency4j
+//TDD BDD
+//spring logging //lombok logging
 //modelmapper
 //play with Json, list, map
 //spring cassandra

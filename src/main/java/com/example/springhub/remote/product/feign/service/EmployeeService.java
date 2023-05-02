@@ -28,16 +28,5 @@ public class EmployeeService implements IEmployeeService {
                 .timeout(Duration.ofMillis(10_000));
     }
 
-    @Override
-    public Mono<Products> findById(Integer id) {
-        Mono<Products> parentObj = webClient.get()
-                .uri("/products/")
-                .retrieve()
-                .onStatus(httpStatus -> HttpStatus.NOT_FOUND.equals(httpStatus),
-                        clientResponse -> Mono.empty())
-                .bodyToMono(Products.class);
-
-        return parentObj.filter(x->x.getId() == id);
-    }
 }
 */

@@ -1,4 +1,3 @@
-/*
 package com.example.springhub.reservationdb.repository;
 
 import com.example.springhub.reservationdb.entity.Reservation;
@@ -10,4 +9,3 @@ import java.util.UUID;
 @Repository
 public interface ReservationRepository extends CassandraRepository<Reservation, UUID> {
 }
-*/
