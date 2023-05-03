@@ -1,14 +1,13 @@
-package com.example.springhub.reservationdb.service.impl;
+package com.example.springhub.reservationcrud.service.impl;
 
 import com.datastax.oss.driver.api.core.uuid.Uuids;
-import com.example.springhub.reservationdb.entity.Reservation;
-import com.example.springhub.reservationdb.repository.ReservationRepository;
-import com.example.springhub.reservationdb.service.RepositoryService;
+import com.example.springhub.reservationcrud.entity.Reservation;
+import com.example.springhub.reservationcrud.repository.ReservationRepository;
+import com.example.springhub.reservationcrud.service.RepositoryService;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cache.annotation.CacheEvict;
-import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.cache.annotation.Caching;
 import org.springframework.http.HttpStatus;

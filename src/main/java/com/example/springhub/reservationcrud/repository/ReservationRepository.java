@@ -1,6 +1,6 @@
-package com.example.springhub.reservationdb.repository;
+package com.example.springhub.reservationcrud.repository;
 
-import com.example.springhub.reservationdb.entity.Reservation;
+import com.example.springhub.reservationcrud.entity.Reservation;
 import org.springframework.data.cassandra.repository.CassandraRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,6 +1,6 @@
-package com.example.springhub.reactive.repository;
+package com.example.springhub.reactivecrud.repository;
 
-import com.example.springhub.reactive.entity.Tutorial;
+import com.example.springhub.reactivecrud.entity.Tutorial;
 import org.springframework.data.cassandra.repository.AllowFiltering;
 import org.springframework.data.cassandra.repository.ReactiveCassandraRepository;
 import org.springframework.stereotype.Repository;

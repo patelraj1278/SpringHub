@@ -1,4 +1,4 @@
-package com.example.springhub.reservationdb.entity;
+package com.example.springhub.reservationcrud.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

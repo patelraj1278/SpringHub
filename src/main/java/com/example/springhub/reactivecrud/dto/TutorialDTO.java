@@ -1,8 +1,9 @@
-package com.example.springhub.reactive.dto;
+package com.example.springhub.reactivecrud.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.web.reactive.function.server.ServerResponse;
 
 import java.util.UUID;
 

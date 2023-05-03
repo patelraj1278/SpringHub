@@ -1,8 +1,7 @@
-package com.example.springhub.reservationdb.controller;
+package com.example.springhub.reservationcrud.controller;
 
-import com.example.springhub.reservationdb.entity.Reservation;
-import com.example.springhub.reservationdb.service.RepositoryService;
-import lombok.RequiredArgsConstructor;
+import com.example.springhub.reservationcrud.entity.Reservation;
+import com.example.springhub.reservationcrud.service.RepositoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;

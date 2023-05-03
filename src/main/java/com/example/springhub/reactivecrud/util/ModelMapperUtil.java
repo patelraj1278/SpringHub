@@ -1,7 +1,7 @@
-package com.example.springhub.reactive.util;
+package com.example.springhub.reactivecrud.util;
 
-import com.example.springhub.reactive.dto.TutorialDTO;
-import com.example.springhub.reactive.entity.Tutorial;
+import com.example.springhub.reactivecrud.dto.TutorialDTO;
+import com.example.springhub.reactivecrud.entity.Tutorial;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.BeanUtils;
 

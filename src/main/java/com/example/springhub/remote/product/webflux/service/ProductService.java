@@ -1,6 +1,6 @@
 package com.example.springhub.remote.product.webflux.service;
 
-import com.example.springhub.reactive.entity.Tutorial;
+import com.example.springhub.reactivecrud.entity.Tutorial;
 import com.example.springhub.remote.product.webflux.model.Parent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

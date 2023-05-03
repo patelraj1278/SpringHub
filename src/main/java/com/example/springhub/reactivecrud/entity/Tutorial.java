@@ -1,4 +1,4 @@
-package com.example.springhub.reactive.entity;
+package com.example.springhub.reactivecrud.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

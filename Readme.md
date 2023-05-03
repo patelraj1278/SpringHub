@@ -1,21 +1,22 @@
-//spring security
-//swagger
+//Understand mono,flux, routerfunction
+//spring exception handling - onErrorReturn/onErrorResume
 //spring kafka
-//spring batch
+//resiliency4j
+//spring security
+//TDD BDD
+//swagger
+//spring actuator health
+//custom deep health check
+
 
 //spring cache
-//resiliency4j
-//TDD BDD
 //spring logging //lombok logging
 //modelmapper
 //play with Json, list, map
 //spring cassandra
 //spring feign client
-//spring exception handling
-//spring actuator health
-//custom deep health check
 
-
+//spring batch
 //aws|pcf
 //spring config server
 //blue green
