@@ -16,7 +16,7 @@ public class ReservationController {
     private final RepositoryService repositoryService;
 
     @GetMapping("/getReservation/")
-    private ResponseEntity<List<Reservation>> getReservation(@PathVariable("id") UUID uuid){
+    private ResponseEntity<List<Reservation>> getReservation(){
         return this.repositoryService.getReservation();
     }
 

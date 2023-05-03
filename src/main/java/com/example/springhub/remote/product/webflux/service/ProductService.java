@@ -18,9 +18,9 @@ import reactor.core.publisher.Mono;
 import java.time.Duration;
 
 @Service
-public class EmployeeService {
+public class ProductService {
 
-    Logger logger = LoggerFactory.getLogger(EmployeeService.class);
+    Logger logger = LoggerFactory.getLogger(ProductService.class);
 
     @Autowired
     WebClient webClient;
@@ -32,7 +32,7 @@ public class EmployeeService {
                 .retrieve()
                 .bodyToMono(Parent.class)
                 .timeout(Duration.ofMillis(10_000));
-
+        logger.info("Inside getProducts..");
         return ServerResponse.ok()
                 .contentType(MediaType.TEXT_EVENT_STREAM)
                 .body(parent, Tutorial.class);
@@ -45,7 +45,7 @@ public class EmployeeService {
                 .retrieve()
                 .bodyToMono(Parent.class)
                 .timeout(Duration.ofMillis(10_000));
-
+        logger.info("Inside getProducts cache put called..");
         return ServerResponse.ok()
                 .contentType(MediaType.TEXT_EVENT_STREAM)
                 .body(parent, Tutorial.class);
