@@ -27,8 +27,6 @@ public class RouterConfig {
                 .POST("/route/tutorials/saveTutorials",tutorialHandler::saveTutorials)
                 .PUT("/route/tutorials/updateTutorials/{id}",tutorialHandler::updateUserById)
                 .GET("/route/getProducts", productService::getProducts)
-                .GET("/route/getProducts/cacheEvict", productService::removeGetProductsCache)
-                .GET("/route/getProducts/cachePut", productService::getProductsCachePut)
                 .build();
     }
 }
