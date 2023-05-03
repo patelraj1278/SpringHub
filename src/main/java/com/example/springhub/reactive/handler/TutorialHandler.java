@@ -61,7 +61,6 @@ public class TutorialHandler {
 
 
     public Mono<ServerResponse> updateUserById(ServerRequest serverRequest) {
-
         Mono<TutorialDTO> tutorialMono = serverRequest
                 .bodyToMono(TutorialDTO.class)
                 .map(ModelMapperUtil::tutorialDtoToTutorial)
