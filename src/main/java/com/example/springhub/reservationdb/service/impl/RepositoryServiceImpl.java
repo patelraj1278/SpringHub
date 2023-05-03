@@ -1,9 +1,16 @@
 package com.example.springhub.reservationdb.service.impl;
 
+import com.datastax.oss.driver.api.core.uuid.Uuids;
 import com.example.springhub.reservationdb.entity.Reservation;
 import com.example.springhub.reservationdb.repository.ReservationRepository;
 import com.example.springhub.reservationdb.service.RepositoryService;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.cache.annotation.Caching;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -16,12 +23,14 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class RepositoryServiceImpl implements RepositoryService {
 
+    Logger logger = LoggerFactory.getLogger(RepositoryServiceImpl.class);
     private final ReservationRepository reservationRepository;
 
+    @Cacheable("reservationData")
     @Override
     public ResponseEntity<List<Reservation>> getReservation() {
         List<Reservation> reservationData = this.reservationRepository.findAll();
-
+        logger.info("Inside reservationData....");
         if(reservationData.size() > 0){
             return new ResponseEntity<>(reservationData, HttpStatus.OK);
         }else{
@@ -29,6 +38,14 @@ public class RepositoryServiceImpl implements RepositoryService {
         }
     }
 
+    @Caching(evict = {@CacheEvict(value="reservationData", allEntries=true)})
+    @Override
+    public ResponseEntity<HttpStatus> getReservationCacheEvict() {
+        logger.info("Inside reservationData Cache Evict....");
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @Override
     public ResponseEntity<Reservation> getReservationById(UUID id){
         Optional<Reservation> reservationData = this.reservationRepository.findById(id);
 
@@ -39,8 +56,10 @@ public class RepositoryServiceImpl implements RepositoryService {
         }
     }
 
+    @Override
     public ResponseEntity<Reservation> saveReservationData(Reservation reservation){
-        Reservation _reservation = this.reservationRepository.save(new Reservation(UUID.randomUUID(),reservation.getName()));
+        reservation.setId(Uuids.timeBased());
+        Reservation _reservation = this.reservationRepository.save(reservation);
         return new ResponseEntity<>(_reservation,HttpStatus.CREATED);
     }
 

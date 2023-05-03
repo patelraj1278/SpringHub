@@ -16,6 +16,8 @@ public interface RepositoryService {
 
     ResponseEntity<List<Reservation>> getReservation();
 
+    ResponseEntity<HttpStatus> getReservationCacheEvict();
+
     ResponseEntity<Reservation> getReservationById(UUID id);
 
     ResponseEntity<Reservation> saveReservationData(Reservation reservation);

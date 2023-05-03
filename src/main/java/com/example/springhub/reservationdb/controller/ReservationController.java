@@ -3,6 +3,8 @@ package com.example.springhub.reservationdb.controller;
 import com.example.springhub.reservationdb.entity.Reservation;
 import com.example.springhub.reservationdb.service.RepositoryService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -10,17 +12,24 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.UUID;
 
-@RestController("/route/reservation")
-@RequiredArgsConstructor
+@RestController
+@RequestMapping("/route/reservation")
 public class ReservationController {
-    private final RepositoryService repositoryService;
 
-    @GetMapping("/getReservation/")
+    @Autowired
+    private RepositoryService repositoryService;
+
+    @GetMapping(value="/getReservation",produces = MediaType.APPLICATION_JSON_VALUE)
     private ResponseEntity<List<Reservation>> getReservation(){
         return this.repositoryService.getReservation();
     }
 
-    @GetMapping("/getReservation/{id}")
+    @GetMapping(value="/getReservationCacheEvict",produces = MediaType.APPLICATION_JSON_VALUE)
+    private ResponseEntity<HttpStatus> getReservationCacheEvict(){
+        return this.repositoryService.getReservationCacheEvict();
+    }
+
+    @GetMapping(value="/getReservation/{id}",produces = MediaType.APPLICATION_JSON_VALUE)
     private ResponseEntity<Reservation> getReservationById(@PathVariable("id") UUID uuid){
         return this.repositoryService.getReservationById(uuid);
     }

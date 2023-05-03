@@ -14,7 +14,7 @@ import java.util.UUID;
 @NoArgsConstructor
 public class Reservation {
 
-    @PrimaryKey("id")
+    @PrimaryKey
     private UUID id;
     private String name;
 }
