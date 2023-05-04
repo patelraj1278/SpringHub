@@ -10,8 +10,8 @@ import java.util.Date;
 @RestControllerAdvice
 public class ControllerExceptionHandler {
 
-    @ExceptionHandler(NoPublisherFoundException.class)
-    public ResponseEntity<ErrorMessage> globalExceptionHandler(NoPublisherFoundException ex) {
+    @ExceptionHandler(NoSuchUserException.class)
+    public ResponseEntity<ErrorMessage> globalExceptionHandler(NoSuchUserException ex) {
         ErrorMessage message = new ErrorMessage(
                 HttpStatus.NOT_FOUND.value(),
                 new Date(),

@@ -1,5 +1,6 @@
 package com.example.springhub.reactivecrud.service;
 
+import com.example.springhub.error.NoSuchUserException;
 import com.example.springhub.reactivecrud.entity.Tutorial;
 import com.example.springhub.reactivecrud.repository.TutorialReactiveRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +23,8 @@ public class TutorialService implements ITutorialService{
 
     @Override
     public Mono<Tutorial> findById(UUID id) {
-        return tutorialReactiveRepository.findById(id);
+        return tutorialReactiveRepository.findById(id)
+                .switchIfEmpty(Mono.error(new NoSuchUserException("No User Found.")));
     }
 
     @Override

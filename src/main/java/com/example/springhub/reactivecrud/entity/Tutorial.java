@@ -1,6 +1,7 @@
 package com.example.springhub.reactivecrud.entity;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.cassandra.core.mapping.PrimaryKey;
@@ -12,6 +13,7 @@ import java.util.UUID;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class Tutorial {
     @PrimaryKey
     private UUID id;
