@@ -1,7 +1,6 @@
 #In Progress
 //resiliency4j
 //TDD BDD
-//swagger
 
 #TODO
 //spring batch
@@ -10,6 +9,10 @@
 //blue green
 //autoscaling
 //sql database connection & sql queries
+
+#Swagger
+https://www.kitopi.com/post/add-swagger-to-your-spring-boot-3-application-to-easily-document-and-consume-your-rest-api
+
 
 #Spring security
 https://docs.spring.io/spring-security/reference/reactive/configuration/webflux.html
