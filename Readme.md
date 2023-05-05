@@ -2,16 +2,19 @@
 //Resiliency4j
 //TDD BDD
 
-#TODO
-//spring batch
-//aws|pcf
-//spring config server
-//blue green
-//autoscaling
-//sql database connection & sql queries
+#SpringData Cassandra
+Spring Data Feign Client
+Spring Webflux WebClient
+Spring Data ReactiveCassandra (RestController)
+Spring Data ReactiveCassandra (Router)
 
-#Swagger
-https://www.kitopi.com/post/add-swagger-to-your-spring-boot-3-application-to-easily-document-and-consume-your-rest-api
+#Spring Kafka -> https://kafka.apache.org/quickstart
+How to install apache kafka.
+How to start zookeeper and kafka.
+How to create topic.
+How to configure spring and apache kafka.
+How to create kafka producer to send string and json type messages.
+How to create kafka consumer to receive string and json message.
 
 #Spring security
 https://docs.spring.io/spring-security/reference/reactive/configuration/webflux.html
@@ -23,11 +26,21 @@ https://www.baeldung.com/spring-boot-actuators
 #Spring Reactive
 understand mono,flux, routerfunction
 
+#Spring Cache
+@Cacheable
+@CacheEvict
+@CachePut
+@CacheConfig
+@EnableCaching
+
 #Spring exception handling 
 Global ExceptionHandler
 Application Exception Handler
 
 #ObjectMapper JSON
+
+#Swagger
+https://www.kitopi.com/post/add-swagger-to-your-spring-boot-3-application-to-easily-document-and-consume-your-rest-api
 
 #Modelmapper
 DTO to Entity
@@ -37,23 +50,11 @@ Entity to DTO
 @Slf4j
 logging level (springframework or package) inside application.yml
 
-#Spring Cache
-@Cacheable
-@CacheEvict
-@CachePut
-@CacheConfig
-@EnableCaching
 
-#Cassandra
-Spring Data Feign Client
-Spring Webflux WebClient
-Spring Data ReactiveCassandra (RestController)
-Spring Data ReactiveCassandra (Router)
-
-#Kafka -> https://kafka.apache.org/quickstart
-How to install apache kafka.
-How to start zookeeper and kafka.
-How to create topic.
-How to configure spring and apache kafka.
-How to create kafka producer to send string and json type messages.
-How to create kafka consumer to receive string and json message.
+#TODO
+//spring batch
+//aws|pcf
+//spring config server
+//blue green
+//autoscaling
+//sql database connection & sql queries
