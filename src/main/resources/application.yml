@@ -27,3 +27,7 @@ logging:
         springhub:
           kafka: DEBUG
 
+management:
+  endpoint:
+    health:
+      show-details: always
