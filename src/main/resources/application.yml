@@ -24,4 +24,6 @@ logging:
       springframework: INFO
     com:
       example:
-        springhub: INFO
+        springhub:
+          kafka: DEBUG
+
