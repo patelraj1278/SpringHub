@@ -1,9 +1,7 @@
 #In Progress
 //resiliency4j
-//spring security
 //TDD BDD
 //swagger
-//Spring actuator health / Custom deep health check
 
 #TODO
 //spring batch
@@ -12,6 +10,11 @@
 //blue green
 //autoscaling
 //sql database connection & sql queries
+
+#Spring security
+https://docs.spring.io/spring-security/reference/reactive/configuration/webflux.html
+
+#Spring actuator health/Custom deep health check
 
 #Spring Reactive
 understand mono,flux, routerfunction
