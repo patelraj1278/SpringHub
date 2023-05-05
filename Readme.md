@@ -1,5 +1,5 @@
 #In Progress
-//resiliency4j
+//Resiliency4j
 //TDD BDD
 
 #TODO
@@ -12,7 +12,6 @@
 
 #Swagger
 https://www.kitopi.com/post/add-swagger-to-your-spring-boot-3-application-to-easily-document-and-consume-your-rest-api
-
 
 #Spring security
 https://docs.spring.io/spring-security/reference/reactive/configuration/webflux.html
