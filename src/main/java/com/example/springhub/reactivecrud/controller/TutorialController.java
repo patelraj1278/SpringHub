@@ -14,7 +14,7 @@ import reactor.core.publisher.Mono;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/nonroute/tutorial")
+@RequestMapping("/api/nonroute/tutorial")
 public class TutorialController {
 
     @Autowired
