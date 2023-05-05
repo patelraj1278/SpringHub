@@ -16,7 +16,7 @@ https://docs.spring.io/spring-security/reference/reactive/configuration/webflux.
 
 #Spring actuator health/Custom deep health check
 https://leogtzr.medium.com/writing-reactive-spring-actuator-health-indicators-fe61cb7f1ae9
-
+https://www.baeldung.com/spring-boot-actuators
 
 #Spring Reactive
 understand mono,flux, routerfunction
