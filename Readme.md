@@ -43,7 +43,7 @@ Spring Webflux WebClient
 Spring Data ReactiveCassandra (RestController)
 Spring Data ReactiveCassandra (Router)
 
-#Kafka
+#Kafka -> https://kafka.apache.org/quickstart
 How to install apache kafka.
 How to start zookeeper and kafka.
 How to create topic.
