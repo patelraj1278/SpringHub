@@ -38,4 +38,9 @@ public class ReservationController {
             return this.repositoryService.saveReservationData(reservation);
     }
 
+    @GetMapping(value="/getReservationByName/{name}",produces = MediaType.APPLICATION_JSON_VALUE)
+    private ResponseEntity<List<Reservation>> getReservationByName(@PathVariable("name") String name){
+        return this.repositoryService.getReservationByName(name);
+    }
+
 }

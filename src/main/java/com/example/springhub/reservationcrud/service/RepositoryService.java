@@ -19,4 +19,6 @@ public interface RepositoryService {
 
     ResponseEntity<Reservation> saveReservationData(Reservation reservation);
 
+    ResponseEntity<List<Reservation>> getReservationByName(String name);
+
 }

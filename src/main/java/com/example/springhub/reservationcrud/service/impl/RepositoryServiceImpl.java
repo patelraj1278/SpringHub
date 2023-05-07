@@ -62,4 +62,14 @@ public class RepositoryServiceImpl implements RepositoryService {
         return new ResponseEntity<>(_reservation,HttpStatus.CREATED);
     }
 
+    public ResponseEntity<List<Reservation>> getReservationByName(String name){
+        List<Reservation> reservationData = this.reservationRepository.findByName(name);
+
+        if(reservationData.size() > 0){
+            return new ResponseEntity<>(reservationData, HttpStatus.OK);
+        }else{
+            return new ResponseEntity<>(reservationData, HttpStatus.NOT_FOUND);
+        }
+    }
+
 }
