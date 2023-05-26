@@ -1,6 +1,5 @@
 package com.example.springhub.reactivecrud.controller;
 
-import com.example.springhub.error.NoSuchUserException;
 import com.example.springhub.reactivecrud.entity.Tutorial;
 import com.example.springhub.reactivecrud.service.TutorialService;
 import org.springframework.beans.factory.annotation.Autowired;
